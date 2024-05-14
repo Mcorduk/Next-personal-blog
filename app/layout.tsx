@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from '@/stories/Head/Header/Header'
-import Filters from '@/stories/Filters'
+import { Navbar } from '@/stories/Head/Navbar/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +20,26 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Header />
-        <Filters />
+        <Navbar
+          items={[
+            {
+              href: '/#',
+              label: 'All'
+            },
+            {
+              href: '/#',
+              label: 'Front'
+            },
+            {
+              href: '/#',
+              label: 'Back'
+            },
+            {
+              href: '/#',
+              label: 'Full'
+            }
+          ]}
+        />
         <main>{children}</main>
       </body>
     </html>
