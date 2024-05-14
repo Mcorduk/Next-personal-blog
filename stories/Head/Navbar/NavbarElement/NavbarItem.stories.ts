@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { NavbarElement } from './NavbarElement'
+import { NavbarItem } from './NavbarItem'
 
-const meta: Meta<typeof NavbarElement> = {
+const meta: Meta<typeof NavbarItem> = {
   title: 'Sidebar/Navbar/NavbarElement',
-  component: NavbarElement,
+  component: NavbarItem,
   parameters: {
     layout: 'centered'
   },
@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    label: 'Navbar Element'
+    children: '{}'
   }
 }
 
